@@ -95,6 +95,15 @@ In the `xiaomi-mqtt` folder.
 Use `npm start` to run xiaomi-mqtt.<br>
 Use `ctrl c` to stop xiaomi-mqtt.
 
+
+### Usage (Docker installation)
+
+Build and run
+```bash
+docker build -t Dockerfile-%ARCH% . -t xiaomi-mqtt
+docker run -v %PATH_TO_CONFIG%/config.json:/root/.xiaomi-mqtt/config.json --network=host xiaomi-mqtt
+```
+
 #
 # mqtt API
 
