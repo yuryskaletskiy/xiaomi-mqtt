@@ -1,0 +1,11 @@
+FROM arm32v7/node:slim
+
+ENV LIBRARY_PATH=/lib:/usr/lib
+
+ADD . /app
+WORKDIR /app
+RUN npm install
+RUN mkdir /root/.xiaomi-mqtt
+COPY config.json /root/.xiaomi-mqtt
+
+CMD ["node", "index.js"]
