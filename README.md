@@ -100,7 +100,7 @@ Use `ctrl c` to stop xiaomi-mqtt.
 
 Build and run
 ```bash
-docker build -t Dockerfile-%ARCH% . -t xiaomi-mqtt
+docker build -f Dockerfile-%ARCH% . -t xiaomi-mqtt
 docker run -v %PATH_TO_CONFIG%/config.json:/root/.xiaomi-mqtt/config.json --network=host xiaomi-mqtt
 ```
 
